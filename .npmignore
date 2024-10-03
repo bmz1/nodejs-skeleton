@@ -1,0 +1,5 @@
+example
+.circleci
+.github
+.nyc_output
+test

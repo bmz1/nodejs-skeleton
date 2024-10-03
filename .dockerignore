@@ -1,0 +1,15 @@
+example
+dist
+node_modules
+.nyc_output
+.DS_Store
+.build
+.dependabot
+.dockerignore
+.env.example
+.git
+.github
+.gitignore
+.hg
+.svn
+CODEOWNERS

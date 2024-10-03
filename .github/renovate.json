@@ -1,0 +1,91 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":automergeDisabled",
+    ":automergeMinor",
+    "group:linters",
+    "schedule:automergeNonOfficeHours",
+    "schedule:nonOfficeHours",
+    "docker:disable",
+    "group:definitelyTyped"
+  ],
+  "hostRules": [
+    {
+      "hostType": "docker",
+      "matchHost": "281674856106.dkr.ecr.us-east-1.amazonaws.com",
+      "username": "AKIAUDFJBG2VHCZG2NO2",
+      "encrypted": {
+        "password": "wcFMA/xDdHCJBTolAQ/+JnYDnrPUK99nAWZCB+Bu6ruRLl0lHm77tj2oTw9cLGKNNSmYv1yQWor2lOMoxUBTZblnlFkZyShzp1WUtB0hDVszOcbMmENQiN6jtQrStMAaJL3V4sdGnN4Xg6FjvGbtISy7ZB3sAMnKwqDbyrrWyjSDjz/dx2HLnWf8sn+mLrGRN4z/1Tmdi5NlPnmrQ6Fdz4HX/jkH4yvZoql0HgsRd/64Dm1sYTnQJorE/yOjH/7+lsfvE4qbfiGjFC7graHlmycj/lc4vjovzNwNtHvo1NZAiDJV8G6RtEsNr+2fm6JVElL8T500e+qjfwrJnREZpcZpZnQzrX1henW1/dnUTw0hxJ2ksUkuu2ICTPz7WpltVddWSQnOIRe2lsU5b5xBsSv+scwCLYpYxCfi36yH1gkY2aRvgU15cV6iaBRVEpP8RfQ4vQUyA4FbMK/5266QcqHRpPhHuQbGnOGB+2uUAZazda23iH+zyUbE/xHDNC0H15i0BGz339jjJcdqomey1AarMrzP/edfAg+LlssoiwrVLxeB4tTENycZtUaIaOEaG/1cGjrF1v5LXlE2rv7TxWbF2MioZpWT3jmysVqRrIWxm/8F6X9wvgE+qspanatSBR331Vc9MOcGR0EH279GW+4gf4WPXUGVcoO/7+1fAvHZkTTyfAChqmRCrcRZbCbSewHj9S7N2ixh7o8xpEGM7wGJiT5zfeghdC5qTIgnKqQGXGK/WlXjIuYYxj5DZZH89IHIjRgQYmMbvipKdcx5xMs5+oTH1fUzkehgLJlK2AVrhKOhV+QpMrCOOAjBXyQfk4LZ8+oxEQ9MuSuDuIHUi0/cAWvjJ9xFABZYig"
+      }
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": false
+  },
+  "rangeStrategy": "pin",
+  "ignoreDeps": [
+    "dd-trace",
+    "microbundle",
+    "node"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**",
+    "**/scripts/**"
+  ],
+  "timezone": "Europe/Budapest",
+  "updateNotScheduled": false,
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": [
+        "react"
+      ],
+      "groupName": "react packages"
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
+    {
+      "matchPackagePrefixes": [
+        "@ghostmonitor/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    }
+  ],
+  "encrypted": {
+    "npmToken": "wcFMA/xDdHCJBTolAQ//fCLR3zqSoJ3ydTNr5UezE+d6XpTkv/mjjdkTlWXkd/t8ORbgvHdo2e81drcj/Wfr43aKJRfinege0ToYcXH4MkfbE3HyJ8joNBq74b51LeKshBmsiU4ZvSkRjv0P4HvNACYjyoGPuAhcH53IcwMGhI9WP/tP9j8RxUIJUacwVNYtv3c1HUtLfzWmVp7zOzuQf4QQZe6ErMrvThOhmG//1lYqODfjsZptcNXOjmXlUfa+rsfpMGx2j2crMldcOODXs6payQQGvtnbXRBxcBmDxV8pDpHfL2spghKXxXi74YQSc4h7RnwdwMYtxKpXNfPA518xE9bn/ODKrmRWCBLhKZbc7vryvAMPpW1jM/SMCAq/WAIOKNhNwNf4mex/rKhwFjPJvYRgOOfm6JYWOKo55aM5hmhglnElh6+nJisYINwfhU1B/BjtkCcTnpH9em8QX5pxQlAcN7lAFDtTDksnFzyz0eH8YVkU52bmKQkV//iFsUFwOlDOAXH2Os0bxvCZpqgokMWE02W5c0qCnpbZCWP84GeA6/RR/x0XxYTI7u51JZmY5CokMI2nIpQzw4tQyf6I8WhLL01CB/FYv4Q2aoBFfMEyqJyNOFr99PIj4XlC3bwUG+6VvkXpIWR0oUd5jTQpp3GN0Xjv2WmpN18O2LgF0SQPux8Cb+xiZupJvhfSewHPcaEK45YeOKX6Sq9C4/cQJDw4GDT620t3hB/6Zxlg/LjvpxKqB69240/nh4s7jPg2lgCXQ+8br5zQgjMRkYpsJAEyPaVp58iMyx1F80lKC97+rQQ0uCTIL3vidpimltdmKE6bCMiS/aqOpPD84i+EH5VtyT0wpcmESw"
+  }
+}

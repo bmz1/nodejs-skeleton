@@ -1,0 +1,45 @@
+{
+  "name": "@ghostmonitor/app-skeleton",
+  "version": "1.0.0",
+  "description": "App-skeleton",
+  "main": "dist/index.js",
+  "scripts": {
+    "test:ci": "ENV=test nyc --reporter=text mocha --require ts-node/register --inline-diffs --recursive --bail --exit test/**/*.test.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "ts-node example/index.ts",
+    "start": "node dist/app.js",
+    "lint": "eslint . --ext ts"
+  },
+  "keywords": [],
+  "author": "BMZ",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/autoload": "5.10.0",
+    "@ghostmonitor/lib-datadog-trace": "6.13.0",
+    "@ghostmonitor/lib-error": "7.2.1",
+    "@ghostmonitor/lib-logger": "6.13.0",
+    "fastify": "4.28.1",
+    "fastify-plugin": "4.5.1"
+  },
+  "devDependencies": {
+    "@types/chai": "4.3.19",
+    "@types/mocha": "10.0.8",
+    "@types/node": "20.16.5",
+    "@types/sinon": "17.0.3",
+    "@types/supertest": "6.0.2",
+    "chai": "4.5.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard-with-typescript": "40.0.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-no-only-tests": "3.1.0",
+    "eslint-plugin-promise": "6.2.0",
+    "mocha": "10.7.3",
+    "nyc": "17.0.0",
+    "sinon": "18.0.1",
+    "supertest": "7.0.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.6.2"
+  }
+}

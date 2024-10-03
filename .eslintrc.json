@@ -1,0 +1,29 @@
+{
+  "extends": ["standard-with-typescript", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/strict-boolean-expressions": 0,
+    "@typescript-eslint/restrict-template-expressions": 0,
+    "@typescript-eslint/consistent-type-assertions": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/no-unnecessary-type-assertion": 0,
+    "no-only-tests/no-only-tests": "error",
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-floating-promises": 0,
+    "@typescript-eslint/prefer-nullish-coalescing": 0,
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error", "info", "debug"]
+      }
+    ]
+  },
+  "plugins": ["no-only-tests"],
+  "root": true,
+  "env": {
+    "mocha": true
+  }
+}

@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        npm_token: ${NPM_TOKEN}
+    environment:
+      - ENV=test
+    restart: 'no'
+    entrypoint: ['sh', '-c', 'npm run build && npm run test:ci']
